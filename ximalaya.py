@@ -27,28 +27,11 @@ def download_media(id_,name):
     with open(name+'.mp3','wb') as f:
         f.write(response.content)
 
-"""
-#从第一页开始下载
-for page in range(1,8):
-    response = requests.get('https://www.ximalaya.com/youshengshu/2688124/p'+str(page)+'/',headers=headers)
-#    print(response.text)
-    sel = parsel.Selector(response.text)
-    a_s = sel.css('.sound-list ul li a')
-    for a in a_s[:30]:
-        title = a.css('a::attr(title)').get()
-        url = a.css('a::attr(href)').get()
-
-        id_ = url.split('/')[-1]
-        print(title,id_)
-        # 调用下载方法
-        download_media(id_,title)
-"""
-
 def main_():
-    sn = input("请输入地址栏最后7位数字:")
+    link = input("请输入地址栏链接:")
     page_ = int(input("请输入总共页数:"))+1
     for page in range(1, page_):
-        response = requests.get('https://www.ximalaya.com/youshengshu/'+str(sn)+'/p' + str(page) + '/', headers=headers)
+        response = requests.get(link, headers=headers)
         #    print(response.text)
         sel = parsel.Selector(response.text)
         a_s = sel.css('.sound-list ul li a')
@@ -62,5 +45,5 @@ def main_():
             download_media(id_, title)
 
 if __name__ == '__main__':
-    print("喜马拉雅 免费 有声读物 专用下载器！\n")
+    print("喜马拉雅 免费产品 专用下载器！\n请输入下载链接,例如：https://www.ximalaya.com/yinyue/22886272/\n")
     main_()
