@@ -1,6 +1,7 @@
 import requests
 import pprint
 import parsel
+import re
 
 # 浏览器伪装
 headers = {
@@ -27,6 +28,13 @@ def download_media(id_,name):
     with open(name+'.mp3','wb') as f:
         f.write(response.content)
 
+#清除存储命名中的文件非法字符
+def validateTitle(title):
+    rstr = r"[\/\\\:\*\?\"\<\>\|]"  # '/ \ : * ? " < > |'
+    new_title = re.sub(rstr, "_", title)  # 替换为下划线
+    return new_title
+
+
 def main_():
     link = input("请输入地址栏链接:")
     page_ = int(input("请输入总共页数:"))+1
@@ -37,6 +45,8 @@ def main_():
         a_s = sel.css('.sound-list ul li a')
         for a in a_s[:30]:
             title = a.css('a::attr(title)').get()
+            #调用清除存储命名中的文件非法字符方法
+            title = validateTitle(title)
             url = a.css('a::attr(href)').get()
 
             id_ = url.split('/')[-1]
