@@ -3,6 +3,7 @@
 
 请严格按照要求输入，暂未加入纠错功能  
 暂只支持免费资源下载
+请合理、合法使用！！
 
 
 <img width="957" alt="image" src="https://github.com/kyarazhan/XMLY/blob/master/picture/readme1.png">  
