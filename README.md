@@ -7,8 +7,9 @@
 
 <img width="957" alt="image" src="https://github.com/kyarazhan/XMLY/blob/master/picture/readme1.png">  
 
-# 更新说明
-https://github.com/kyarazhan/XMLY/blob/master/UpdateRecord.md
+# 更新说明  
+[详细记录](https://github.com/kyarazhan/XMLY/blob/master/UpdateRecord.md)
+
 
 # License
 
