@@ -1,6 +1,6 @@
  <img width="270" alt="image" src="https://github.com/kyarazhan/XMLY/blob/master/resources/image/logo_1.png"> 
 
-# 本版本为开发板，功能不稳定
+# 本版本为开发板，功能不稳定  
 
 # 喜马拉雅免费产品专用下载器  
 
@@ -11,8 +11,8 @@
 
 <img width="957" alt="image" src="https://github.com/kyarazhan/XMLY/blob/master/resources/image/readme1.png">  
 
-# 更新说明  
-[详细记录](https://github.com/kyarazhan/XMLY/blob/master/UpdateRecord.md)
+# 开发版更新说明  
+[开发版详细记录](https://github.com/kyarazhan/XMLY/blob/dev/UpdateRecord_DEV.md)
 
 
 # License
