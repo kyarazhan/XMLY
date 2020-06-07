@@ -10,7 +10,6 @@ headers = {
 
 #定义一个下载方法
 def download_media(id_,name):
-   #代码块 函数 方法
     #根据网址请求服务器
     response = requests.get('https://www.ximalaya.com/revision/play/v1/audio?id=' + str(id_)+ '&ptype=1',headers=headers)
     #字典类型
@@ -43,14 +42,6 @@ def validateTitle(title):
     new_title = re.sub(rstr_1, " ", new_title_2)
     return new_title
 
-"""
-def serial(title):
-
-    for serial_ in range(1,main_.serial_1):
-        new_title = str(serial_)+title
-        return new_title
-"""
-
 def main_():
     link = input("请输入地址栏链接:")
     page_ = int(input("请输入总共页数:"))+1
@@ -58,7 +49,8 @@ def main_():
         response = requests.get(link+'p'+str(page)+'/', headers=headers)
 #        print(response.text)
         sel = parsel.Selector(response.text)
-        a_s = sel.css('.sound-list ul li a')
+#        a_s = sel.css('.sound-list ul li a')
+        a_s = sel.css('.sound-list ul li')
         for a in a_s[:30]:
             #获取文件名
             title = a.css('a::attr(title)').get()
@@ -73,5 +65,5 @@ def main_():
             download_media(id_, title)
 
 if __name__ == '__main__':
-    print("喜马拉雅 免费产品 专用下载器！\n请输入下载链接,例如：https://www.ximalaya.com/yinyue/22886272/\n")
+    print("喜马拉雅-免费音频-下载器！\n请输入下载链接,例如：https://www.ximalaya.com/yinyue/22886272/\n")
     main_()
