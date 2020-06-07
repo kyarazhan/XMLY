@@ -1,4 +1,4 @@
-#更新记录
+# 更新记录
 
 # [v1.2](https://github.com/kyarazhan/XMLY/releases/tag/1.2)  
 20200607  
