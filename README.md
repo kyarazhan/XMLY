@@ -1,5 +1,5 @@
 # XMLY  
-<img width="270" alt="image" src="https://github.com/kyarazhan/XMLY/blob/master/resources/logo_1.png"> 
+<img width="270" alt="image" src="https://github.com/kyarazhan/XMLY/blob/master/resources/image/logo_1.png"> 
 
 # 喜马拉雅免费产品专用下载器  
 
