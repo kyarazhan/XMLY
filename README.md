@@ -3,6 +3,14 @@
 
 <img width="957" alt="image" src="https://github.com/kyarazhan/XMLY/blob/master/picture/readme1.png">  
 
+#更新记录
+
+v1.1 20200607
+修复存储文件非法字符bug
+
+v1.0 20200606
+发布第一版
+
 
 # License
 
